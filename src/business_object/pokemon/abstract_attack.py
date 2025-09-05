@@ -9,7 +9,7 @@ class AbstractAttack(ABC):
     def __init__(self, name: str, power: int, description: str = ""):
         self._name = name
         self._power = power
-        self._description = description
+        self._description = description 
 
     @abstractmethod
     def compute_damage(self, attacker, defender) -> int:

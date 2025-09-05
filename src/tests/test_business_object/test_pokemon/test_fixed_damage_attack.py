@@ -8,7 +8,7 @@ class TestFixedDamageAttack:
         # GIVEN
         stats = Statistic(attack=50, defense=40, sp_atk=30, sp_def=20, speed=60, hp=100)
         attacker = AttackerPokemon(stat_max=stats, stat_current=stats, level=5, name="Pikachu")
-        attack = FixedDamageAttack(name="Tackle", power=35)
+        attack = FixedDamageAttack(name="Test", power=35)
 
         # WHEN
         damage = attack.compute_damage(attacker, attacker)

@@ -10,15 +10,16 @@ class AbstractFormulaAttack(AbstractAttack, ABC):
 
     def compute_damage(self, attacker, defender) -> int:
         """
-        Computes the damage using the formula:
-        damage = power * (attack_stat / defense_stat) * random_multiplier
+        Computes the damage using the formula
         """
+        level = attacker.level
         attack_stat = self.get_attack_stat(attacker)
         defense_stat = self.get_defense_stat(defender)
         random_multiplier = random.uniform(0.85, 1.0)
 
-        damage = self._power * (attack_stat / defense_stat) * random_multiplier
-        return max(1, int(damage))  # at least 1 damage
+        damage = (((2 * level / 5 + 2) *
+                  self._power * attack_stat / (defense_stat * 50)) + 2) * random_multiplier
+        return int(damage)
 
     @abstractmethod
     def get_attack_stat(self, attacker) -> float:
