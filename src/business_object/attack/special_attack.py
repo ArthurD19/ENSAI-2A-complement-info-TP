@@ -10,3 +10,11 @@ class SpecialFormulaAttack(AbstractFormulaAttack):
 
     def get_defense_stat(self, defender: AbstractPokemon) -> float:
         return defender.sp_def_current
+
+    @property
+    def name(self):
+        return self._name
+
+    @name.setter
+    def name(self, value):
+        self._name = value

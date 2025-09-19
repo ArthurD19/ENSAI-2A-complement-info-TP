@@ -25,13 +25,14 @@ class AttackFactory(metaclass=Singleton):
         :type power: int, optional
         :param name: the attack name, defaults to None
         :type name: str, optional
-        :param description: the attack descritpion, defaults to None
+        :param description: the attack description, defaults to None
         :type description: str, optional
         :raises Exception: if the type is unknown, an exception is raised
-        :return: the instantiate attack
+        :return: the instantiated attack
         :rtype: AbstractAttack
         """
         attack = None
+
         if type == "special attack":
             attack = SpecialFormulaAttack(
                 id=id,
@@ -43,7 +44,7 @@ class AttackFactory(metaclass=Singleton):
             )
         elif type == "physical attack":
             attack = PhysicalFormulaAttack(
-                id,
+                id=id,
                 power=power,
                 name=name,
                 description=description,
@@ -52,11 +53,12 @@ class AttackFactory(metaclass=Singleton):
             )
         elif type == "fixed damage":
             attack = FixedDamageAttack(
-                id,
+                id=id,
                 power=power,
                 name=name,
                 description=description,
                 accuracy=accuracy,
                 element=element,
             )
+
         return attack
