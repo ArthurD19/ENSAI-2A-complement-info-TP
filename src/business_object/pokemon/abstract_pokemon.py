@@ -1,9 +1,12 @@
 import copy
 
 from abc import ABC, abstractmethod
+<<<<<<< HEAD
 from typing import List
 
 from business_object.attack.abstract_attack import AbstractAttack
+=======
+>>>>>>> origin/main
 from business_object.statistic import Statistic
 
 
@@ -16,6 +19,7 @@ class AbstractPokemon(ABC):
     # Constructor
     # -------------------------------------------------------------------------
 
+<<<<<<< HEAD
     def __init__(
         self,
         id=None,
@@ -26,6 +30,9 @@ class AbstractPokemon(ABC):
         common_attacks=[],
         special_attack=None,
     ) -> None:
+=======
+    def __init__(self, stat_max=None, stat_current=None, level=0, name=None, type_pk=None):
+>>>>>>> origin/main
         # -----------------------------
         # Attributes
         # -----------------------------
@@ -45,13 +52,15 @@ class AbstractPokemon(ABC):
     def get_pokemon_attack_coef(self) -> float:
         """
         Compute a damage multiplier related to the pokemon type.
-
-        Returns :
-            float : the multiplier
+        Must be implemented in child classes.
         """
         pass
 
+<<<<<<< HEAD
     def level_up(self):
+=======
+    def level_up(self) -> None:
+>>>>>>> origin/main
         """
         Increase the level by one
         """

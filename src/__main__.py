@@ -1,11 +1,16 @@
+<<<<<<< HEAD
 from business_object.pokemon.attacker_pokemon import AttackerPokemon
 from business_object.pokemon.defender_pokemon import DefenderPokemon
+=======
+from business_object.pokemon.pokemon import Pokemon
+>>>>>>> origin/main
 from business_object.statistic import Statistic
 from business_object.attack.special_attack import SpecialFormulaAttack
 from business_object.attack.physical_attack import PhysicalFormulaAttack
 
 from services.battle_service import BattleService
 
+<<<<<<< HEAD
 pikachu = AttackerPokemon(
     level=10,
     stat_current=Statistic(
@@ -25,6 +30,10 @@ pikachu = AttackerPokemon(
         ),
     ],
 )
+=======
+# Create a pokemon
+pk1 = Pokemon(name="pika", stat_current=stats_pk1, type_pk="Attacker")
+>>>>>>> origin/main
 
 snorlax = DefenderPokemon(
     level=10,

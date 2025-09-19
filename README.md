@@ -32,6 +32,7 @@ pip list                            # to list all installed packages
 - **tabulate** : simple way to pretty-print tabular data in Python.
 - **uvicorn** : Uvicorn is a lightning-fast ASGI server implementation.
 
+<<<<<<< HEAD
 
 ## Unit Tests
 
@@ -39,6 +40,8 @@ pip list                            # to list all installed packages
 python -m pytest -v
 ```
 
+=======
+>>>>>>> origin/main
 ## Run
 
 ```bash
